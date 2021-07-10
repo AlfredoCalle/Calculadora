@@ -519,6 +519,7 @@ public class Calculadora extends javax.swing.JFrame {
         addNumber("+");
     }//GEN-LAST:event_btn_sumActionPerformed
 
+     // Metodo que se encarg se las operaciones matematicas
     private void btn_igualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_igualActionPerformed
         try {
             String resultado = se.eval(txtOperacion.getText()).toString();
@@ -526,11 +527,10 @@ public class Calculadora extends javax.swing.JFrame {
         } catch (Exception e) {
             //txtOperacion.setText("ERROR");
         }
-
     }//GEN-LAST:event_btn_igualActionPerformed
 
+     // Metodo que cambia todos los componentes a modo oscuro
     boolean modoOscuro = false;
-
     private void btn_oscuroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_oscuroActionPerformed
         if (!modoOscuro) {
             jPanel1.setBackground(Color.decode("#212b41"));
@@ -616,7 +616,8 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
     }
-
+    
+    // Metodo que cambia el color del boton1 a dark
     public void cambiarColorBtn1(JButton btn) {
         btn.setIcon(new ImageIcon(getClass().getResource("/imagenes/btn1_dark.png")));
         btn.setPressedIcon(new ImageIcon(getClass().getResource("/imagenes/btn1_dark.png")));
@@ -624,13 +625,14 @@ public class Calculadora extends javax.swing.JFrame {
         btn.setForeground(Color.decode("#0db387"));
     }
 
+     // Metodo que cambia el color del boton2 a dark
     public void cambiarColorBtn2(JButton btn) {
         btn.setIcon(new ImageIcon(getClass().getResource("/imagenes/btn2_dark.png")));
         btn.setPressedIcon(new ImageIcon(getClass().getResource("/imagenes/btn2_dark.png")));
         btn.setRolloverIcon(new ImageIcon(getClass().getResource("/imagenes/bt1_pressed_dark.png")));
         btn.setForeground(Color.decode("#96a8a0"));
     }
-
+    // Metodo que actualiza el texto de operacion
     public void addNumber(String digito) {
         txtOperacion.setText(txtOperacion.getText() + digito);
     }
